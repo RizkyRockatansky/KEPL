@@ -3,4 +3,4 @@
 host     = localhost
 user     = root
 password = 
-dbname   = db_alumni
+dbname   = db_alumnii
