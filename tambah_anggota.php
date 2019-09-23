@@ -55,7 +55,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Nama lengkap
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_lengkap" id="nama_lengkap" required class="form-control" placeholder="Nama lengkap" onchange="auto_nickname(this.value)">
+													<input type="text" name="nama_lengkap" id="nama_lengkap" required class="form-control" placeholder="Nama lengkap" onchange="auto_nickname(this.value)" required>
 												</div>
 											</div>
 											<!-- Nama Panggilan -->
@@ -64,7 +64,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Nama panggilan
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_panggilan" id="nama_panggilan" required class="form-control" placeholder="Nama panggilan" onchange="auto_username(this.value)" onkeyup="cek_nama_panggilan(this.value)">
+													<input type="text" name="nama_panggilan" id="nama_panggilan" required class="form-control" placeholder="Nama panggilan" onchange="auto_username(this.value)" onkeyup="cek_nama_panggilan(this.value)" required>
 													<p class="form-control-static text-danger" id="info_nama_panggilan"></p>
 													
 												</div>
@@ -76,11 +76,11 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
 													<label class="radio">
-														<input type="radio" data-toggle="radio" name="jenis_kelamin" id="jenis_kelamin1" value="laki-laki" data-radiocheck-toggle="radio" checked="" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+														<input type="radio" data-toggle="radio" name="jenis_kelamin" id="jenis_kelamin1" value="laki-laki" data-radiocheck-toggle="radio" required checked="" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
 														Laki-laki
 													</label>
 													<label class="radio">
-														<input type="radio" data-toggle="radio" name="jenis_kelamin" id="jenis_kelamin2" value="perempuan" data-radiocheck-toggle="radio" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+														<input type="radio" data-toggle="radio" name="jenis_kelamin" id="jenis_kelamin2" value="perempuan" data-radiocheck-toggle="radio" class="custom-radio" required><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
 														Perempuan
 													</label>
 												</div>
@@ -91,7 +91,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Tempat Lahir
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
-													<select data-toggle="select" name="tempat_lahir" id="tempat_lahir" class="form-control select select-primary mrs mbm">
+													<select data-toggle="select" name="tempat_lahir" id="tempat_lahir" class="form-control select select-primary mrs mbm" required>
 														<option value="">- Pilih Kota -</option>
 														<?php 
 															// Ambil data kota dari tabel master kota
@@ -117,7 +117,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
 													<div class="input-group">
-														<input type="text" name="tanggal_lahir" id="tanggal_lahir" class="form-control datepicker" placeholder="Tanggal Lahir">
+														<input type="text" name="tanggal_lahir" id="tanggal_lahir" class="form-control datepicker" placeholder="Tanggal Lahir" required>
 														<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 													</div>
 												</div>
@@ -128,7 +128,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Agama
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
-													<select data-toggle="select" name="agama" id="agama" class="form-control select select-primary mrs mbm">
+													<select data-toggle="select" name="agama" id="agama" class="form-control select select-primary mrs mbm" required>
 														<option value="">- Pilih Agama -</option>
 														<?php 
 															// Ambil data kota dari tabel master kota
@@ -153,7 +153,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Foto
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="file" name="foto" id="foto" class="form-control">
+													<input type="file" name="foto" id="foto" class="form-control" required>
 												</div>
 											</div>
 											<!-- Aktif -->
@@ -163,11 +163,11 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
 													<label class="radio">
-														<input type="radio" data-toggle="radio" name="aktif" id="aktif1" value="ya" data-radiocheck-toggle="radio" checked="" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+														<input type="radio" data-toggle="radio" name="aktif" id="aktif1" value="ya" data-radiocheck-toggle="radio" checked="" class="custom-radio" required><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
 														Ya
 													</label>
 													<label class="radio">
-														<input type="radio" data-toggle="radio" name="aktif" id="aktif2" value="tidak" data-radiocheck-toggle="radio" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+														<input type="radio" data-toggle="radio" name="aktif" id="aktif2" value="tidak" data-radiocheck-toggle="radio" class="custom-radio" required><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
 														Tidak
 													</label>
 												</div>
@@ -179,7 +179,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Provinsi Tinggal
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
-													<select data-toggle="select" name="id_provinsi" id="id_provinsi" class="form-control select select-primary mrs mbm" onchange="ajax_kota(this.value, 'id_kota', 'kolom_kota')">
+													<select data-toggle="select" name="id_provinsi" required id="id_provinsi" class="form-control select select-primary mrs mbm" onchange="ajax_kota(this.value, 'id_kota', 'kolom_kota')">
 														<option value="">- Pilih Provinsi -</option>
 														<?php 
 															// Ambil data kota dari tabel master kota
@@ -204,7 +204,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Kota Tinggal
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4" id="kolom_kota">
-													<input type='hidden' name='id_kota' id='id_kota' value=''>
+													<input type='hidden' name='id_kota' id='id_kota' value='' required>
 												</div>
 											</div>
 											<!-- Alamat -->
@@ -213,7 +213,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Alamat
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<textarea name="alamat" id="alamat" class="form-control"></textarea>
+													<textarea name="alamat" id="alamat" class="form-control" required></textarea>
 												</div>
 											</div>
 										</div>
@@ -231,7 +231,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Nama Suami / Istri
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_pasangan" id="nama_pasangan" class="form-control" placeholder="Nama Pasangan">
+													<input type="text" name="nama_pasangan" id="nama_pasangan" class="form-control" placeholder="Nama Pasangan" required>
 												</div>
 											</div>
 											<!-- Nama Anak -->
@@ -241,7 +241,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
 													<div class="input-group">
-														<input type="text" name="nama_anak[]" class="form-control" placeholder="Nama Anak">
+														<input type="text" name="nama_anak[]" class="form-control" placeholder="Nama Anak" required>
 														<span class="input-group-btn">
 															<button type="button" name="tambah_nama_anak" id="tambah_nama_anak" class="btn btn-default">Tambah</button>
 														</span>
@@ -265,7 +265,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Nama Ayah
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_ayah" id="nama_ayah" class="form-control" placeholder="Nama Ayah">
+													<input type="text" name="nama_ayah" id="nama_ayah" class="form-control" placeholder="Nama Ayah" required>
 												</div>
 											</div>
 											<!-- Nama Ibu -->
@@ -274,7 +274,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Nama Ibu
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_ibu" id="nama_ibu" class="form-control" placeholder="Nama Ibu">
+													<input type="text" name="nama_ibu" id="nama_ibu" class="form-control" placeholder="Nama Ibu" required>
 												</div>
 											</div>
 											<!-- Nama Wali -->
@@ -283,7 +283,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Nama Wali
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="nama_wali" id="nama_wali" class="form-control" placeholder="Nama Wali (Optional)">
+													<input type="text" name="nama_wali" id="nama_wali" class="form-control" placeholder="Nama Wali (Optional)" required>
 												</div>
 											</div>
 											<hr>
@@ -293,7 +293,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Provinsi Tinggal
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
-													<select data-toggle="select" name="id_provinsi_ot" id="id_provinsi_ot" class="form-control select select-primary mrs mbm" onchange="ajax_kota(this.value, 'id_kota_ot', 'kolom_kota_ot')">
+													<select required data-toggle="select" name="id_provinsi_ot" id="id_provinsi_ot" class="form-control select select-primary mrs mbm" onchange="ajax_kota(this.value, 'id_kota_ot', 'kolom_kota_ot')">
 														<option value="">- Pilih Provinsi -</option>
 														<?php 
 															// Ambil data kota dari tabel master kota
@@ -318,7 +318,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Kota Tinggal
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4" id="kolom_kota_ot">
-													<input type='hidden' name='id_kota_ot' id='id_kota_ot' value=''>
+													<input type='hidden' name='id_kota_ot' id='id_kota_ot' value='' required>
 												</div>
 											</div>
 											<!-- Alamat Orang Tua -->
@@ -327,7 +327,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Alamat
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<textarea name="alamat_ot" id="alamat_ot" class="form-control"></textarea>
+													<textarea name="alamat_ot" id="alamat_ot" class="form-control" required></textarea>
 												</div>
 											</div>
 										</div>
@@ -347,10 +347,10 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 												<div class="col-lg-8 col-md-8 col-sm-6">
 													<div class="row">
 														<div class="col-lg-3 col-md-3 col-sm-3">
-															<input type="text" name="no_rumah_ext" id="no_rumah_ext" class="form-control" placeholder="Kode" onfocus="input_nomor(this.id)">
+															<input type="text" name="no_rumah_ext" id="no_rumah_ext" class="form-control" placeholder="Kode" onfocus="input_nomor(this.id)" required>
 														</div>
 														<div class="col-lg-9 col-md-9 col-sm-9">
-															<input type="text" name="no_rumah" id="no_rumah" class="form-control" placeholder="No Rumah" onfocus="input_nomor(this.id)">
+															<input required type="text" name="no_rumah" id="no_rumah" class="form-control" placeholder="No Rumah" onfocus="input_nomor(this.id)">
 														</div>
 														<div class="col-lg-12 col-md-12 col-sm-12">
 															<span class="help-block">Pisahkan kode wilayah dengan no telepon rumah.</span>
@@ -364,7 +364,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													No Handphone
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="no_handphone" id="no_handphone" class="form-control" placeholder="No Handphone" onfocus="input_nomor(this.id)">
+													<input required type="text" name="no_handphone" id="no_handphone" class="form-control" placeholder="No Handphone" onfocus="input_nomor(this.id)">
 												</div>
 											</div>
 											<!-- No Handphone 2 -->
@@ -373,7 +373,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													No Handphone 2
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="no_handphone2" id="no_handphone2" class="form-control" placeholder="No Handphone 2" onfocus="input_nomor(this.id)">
+													<input required type="text" name="no_handphone2" id="no_handphone2" class="form-control" placeholder="No Handphone 2" onfocus="input_nomor(this.id)">
 												</div>
 											</div>
 											
@@ -384,7 +384,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Email
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="alamat_email" id="alamat_email" class="form-control" placeholder="Email">
+													<input required type="text" name="alamat_email" id="alamat_email" class="form-control" placeholder="Email">
 												</div>
 											</div>
 											<!-- Website -->
@@ -393,7 +393,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Website
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<input type="text" name="alamat_website" id="alamat_website" class="form-control" placeholder="Website">
+													<input required type="text" name="alamat_website" id="alamat_website" class="form-control" placeholder="Website">
 												</div>
 											</div>
 											<!-- Facebook -->
@@ -415,7 +415,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Angkatan
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
-													<input type="text" name="angkatan" id="angkatan" class="form-control" placeholder="Angkatan (contoh : 12)">
+													<input required type="text" name="angkatan" id="angkatan" class="form-control" placeholder="Angkatan (contoh : 12)">
 												</div>
 											</div>
 											<!-- Tahun Masuk -->
@@ -423,8 +423,8 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 												<label class="col-lg-3 col-md-3 col-sm-5 control-label">
 													Tahun Masuk
 												</label>
-												<div class="col-lg-5 col-md-5 col-sm-4">
-													<input type="text" name="tahun_masuk" id="tahun_masuk" class="form-control" placeholder="Tahun Masuk (contoh : 1990)" onfocus="input_nomor(this.id)">
+												<div  class="col-lg-5 col-md-5 col-sm-4">
+													<input required type="text" name="tahun_masuk" id="tahun_masuk" class="form-control" placeholder="Tahun Masuk (contoh : 1990)" onfocus="input_nomor(this.id)">
 												</div>
 											</div>
 											<!-- Tahun Lulus -->
@@ -433,7 +433,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Tahun Lulus
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
-													<input type="text" name="tahun_keluar" id="tahun_keluar" class="form-control" placeholder="Tahun Lulus (contoh : 1996)" onfocus="input_nomor(this.id)">
+													<input required type="text" name="tahun_keluar" id="tahun_keluar" class="form-control" placeholder="Tahun Lulus (contoh : 1996)" onfocus="input_nomor(this.id)">
 												</div>
 											</div>
 											<!-- Kelas Terakhir -->
@@ -442,7 +442,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Kelas Terakhir
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
-													<input type="text" name="kelas_terakhir" id="kelas_terakhir" class="form-control" placeholder="Kelas Terakhir">
+													<input required type="text" name="kelas_terakhir" id="kelas_terakhir" class="form-control" placeholder="Kelas Terakhir">
 												</div>
 											</div>
 											<hr>
@@ -452,7 +452,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Catatan
 												</label>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<textarea name="catatan" id="catatan" class="form-control"></textarea>
+													<textarea required name="catatan" id="catatan" class="form-control"></textarea>
 												</div>
 											</div>
 										</div>
@@ -471,7 +471,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
 													<p id="username_view" class="form-control-static"></p>
-													<input type="hidden" name="username" id="username" value="">
+													<input required type="hidden" name="username" id="username" value="">
 												</div>
 											</div>
 											<!-- Password -->
@@ -480,8 +480,8 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 													Password
 												</label>
 												<div class="col-lg-5 col-md-5 col-sm-4">
-													<input type="password" name="password" id="password" class="form-control" placeholder="Password" value="<?php echo substr(hash("SHA256", rand()), 0, 8); ?>">
-													<span class="help-block"><label class="checkbox" for="show_password"><input type="checkbox" data-toggle="checkbox" value="" id="show_password" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span> Tampilkan password</label></span>
+													<input required type="password" name="password" id="password" class="form-control" placeholder="Password" value="<?php echo substr(hash("SHA256", rand()), 0, 8); ?>">
+													<span class="help-block"><label class="checkbox" for="show_password"><input required type="checkbox" data-toggle="checkbox" value="" id="show_password" class="custom-checkbox"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span> Tampilkan password</label></span>
 													<span class="help-block">Password diatas adalah hasil pembuatan otomatis, anda masih dapat mengubah password tersebut.</span>
 													
 												</div>
