@@ -12,6 +12,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 				echo "<div class='alert alert-info'>".$_SESSION["informasi"]."</div>";
 				unset($_SESSION["informasi"]);
 			}
+
 			?>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 				<div class="panel panel-default">
@@ -22,6 +23,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 							<ul class="nav nav-tabs" role="tablist">
 								<li role="presentation" class="active">
 									<a href="#basic_info" aria-controls="basic_info" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-user"></i> Info Dasar</a>
+
 								</li>
 								<!-- <li role="presentation">
 									<a href="#family_info" aria-controls="family_info" role="tab" data-toggle="tab"><i class="glyphicon glyphicon-home"></i> Keluarga</a> 
@@ -564,7 +566,7 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 				data: {aksi: 'ajax_cek_nama_panggilan', nama_panggilan: nama_panggilan},
 			})
 			.done(function(hasil) {
-				$("#info_nama_panggilan").html(hasil);
+				$("#info_nama_panggilan").html("harap isikan menggunakan huruf");
 				if (hasil!="") {
 					$("#proses_simpan").hide('slow');
 				}

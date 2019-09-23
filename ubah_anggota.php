@@ -22,24 +22,17 @@ if (sudah_login() && (strpos($_SESSION['a2_hak_akses'], '003')!==FALSE || $_SESS
 		$id_kota        = $data["id_kota"];
 		$alamat         = $data["alamat"];
 		// Keluarga
-		$nama_pasangan  = stripslashes($data["nama_pasangan"]);
-		$nama_anak      = $data["nama_anak"];
+		
 		// Orang Tua
-		$nama_ayah      = stripslashes($data["nama_ayah"]);
-		$nama_ibu       = stripslashes($data["nama_ibu"]);
-		$nama_wali      = stripslashes($data["nama_wali"]);
-		$id_provinsi_ot = $data["id_provinsi_ot"];
-		$id_kota_ot     = $data["id_kota_ot"];
-		$alamat_ot      = $data["alamat_orang_tua"];
+		
 		// Kontak
 		$no_rumah       = $data["no_rumah"];
 		$no_handphone   = $data["no_handphone"];
 		$no_handphone2  = $data["no_handphone2"];
-		$pin_blackberry = $data["pin_blackberry"];
+	
 		$alamat_email   = $data["alamat_email"];
 		$alamat_website = $data["alamat_website"];
-		$facebook       = $data["facebook"];
-		$twitter        = $data["twitter"];
+
 		// Akademik
 		$angkatan       = $data["angkatan"];
 		$tahun_masuk    = $data["tahun_masuk"];
