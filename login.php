@@ -9,6 +9,7 @@ else {
 	// Tambahkan header
 	include 'global_header.php';
 
+	// Jika ada session dari hasil error, berikan informasi errornya
 	$form_username = "";
 	if (isset($_SESSION["form_username"])) {
 		$form_username = $_SESSION["form_username"];

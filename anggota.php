@@ -149,7 +149,16 @@ if (sudah_login()) {
 	                    <div class="col-sm-8 form-control-static" id="md_alamat_lengkap"></div>
 	                </div>
 
-	                
+	                <hr class="dashed">
+	                <legend class="text-center">Data Keluarga</legend>
+	                <div class="form-group">
+	                    <label class="control-label col-sm-3">Nama Pasangan :</label>
+	                    <div class="col-sm-8 form-control-static" id="md_nama_pasangan"></div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="control-label col-sm-3">Nama Anak :</label>
+	                    <div class="col-sm-8 form-control-static" id="md_nama_anak"></div>
+	                </div>
 
 	                <hr class="dashed">
 					<legend class="text-center">Data Orang Tua</legend>
@@ -184,7 +193,10 @@ if (sudah_login()) {
 	                    <label class="control-label col-sm-3">No Handphone 2 :</label>
 	                    <div class="col-sm-8 form-control-static" id="md_no_handphone2"></div>
 	                </div>
-	                
+	                <div class="form-group">
+	                    <label class="control-label col-sm-3">Pin Blackberry :</label>
+	                    <div class="col-sm-8 form-control-static" id="md_pin_blackberry"></div>
+	                </div>
 	                <div class="form-group">
 	                    <label class="control-label col-sm-3">Email :</label>
 	                    <div class="col-sm-8 form-control-static" id="md_alamat_email"></div>
@@ -194,7 +206,13 @@ if (sudah_login()) {
 	                    <div class="col-sm-8 form-control-static" id="md_alamat_website"></div>
 	                </div>
 	                <div class="form-group">
-	                
+	                    <label class="control-label col-sm-3">Facebook :</label>
+	                    <div class="col-sm-8 form-control-static" id="md_facebook"></div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="control-label col-sm-3">Twitter :</label>
+	                    <div class="col-sm-8 form-control-static" id="md_twitter"></div>
+	                </div>
 
 	                <hr class="dashed">
 					<legend class="text-center">Data Akademik</legend>

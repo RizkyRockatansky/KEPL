@@ -4,6 +4,7 @@
 ?>
 <html>
 	<head>
+		<title><?php echo $setting_sistem["nama_sistem"]; ?></title>
 		<script type="text/javascript" src="./assets/js/vendor/jquery.min.js"></script>
 		<script type="text/javascript" src="./assets/js/flat-ui.min.js"></script>
 		<link rel="stylesheet" href="./assets/css/vendor/bootstrap/css/bootstrap.min.css">
